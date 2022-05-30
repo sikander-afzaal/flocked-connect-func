@@ -1,0 +1,20 @@
+.join-box {
+  border: 1px solid black;
+}
+.join-box h2 {
+  font-size: 14px !important;
+}
+.main-join {
+  background-color: white;
+  width: 100%;
+  color: black;
+  padding: 1.8rem 0rem;
+}
+.main-join h2 {
+  text-align: center;
+}
+@media screen and (max-width: 616px) {
+  .main-join h2 {
+    font-size: 12px !important;
+  }
+}

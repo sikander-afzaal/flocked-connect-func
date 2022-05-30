@@ -1,0 +1,231 @@
+.landing-cont,
+.faq-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+}
+.landing-cont {
+  background-image: url("../../Assets/bg.png");
+  background-size: 100% 105%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1700px;
+  margin-top: 180px;
+  padding-bottom: 4rem;
+}
+.main-h1 {
+  font-size: 96px;
+  text-transform: uppercase;
+}
+.main-desc {
+  font-size: 15px;
+  text-align: left;
+  width: 1200px;
+  margin-top: 20px;
+  line-height: 1.65;
+  font-family: "Press Start 2P", cursive !important;
+}
+.box-landing {
+  margin-top: 3rem;
+  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 1200px;
+  height: auto;
+  border: 1px solid black;
+  padding-bottom: 2rem;
+}
+.top-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: black;
+  width: 100%;
+}
+.top-box .main-text {
+  color: white;
+  text-align: center;
+  font-size: 19px;
+  width: 100%;
+}
+.main-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-top: 2rem;
+  padding-inline: 1.5rem;
+  gap: 20px;
+}
+.content-box {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+}
+.main-box h1 {
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+.main-box h2 {
+  font-size: 0.8rem;
+  color: #333333;
+  line-height: 1.6;
+}
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 20px;
+}
+.list li {
+  font-size: 0.8rem;
+  color: #333333;
+  list-style-image: url("../../Assets/chicken-list.png");
+  list-style-position: inside;
+}
+.nft-div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+.nft-div h2 {
+  font-size: 1rem;
+}
+.main-box-desc {
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+  line-height: 1.6;
+}
+.join-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  gap: 150px;
+  margin-top: 4rem;
+}
+.join-row .join-box {
+  flex: 0.5;
+}
+.tri-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 3rem;
+}
+.left-tri {
+  display: flex;
+  justify-content: center;
+  flex: 0.3;
+}
+.left-tri img {
+  max-width: 100%;
+  object-fit: contain;
+}
+.right-tri {
+  flex: 0.7;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (max-width: 1248px) {
+  .box-landing,
+  .join-row {
+    width: 85%;
+  }
+  .main-desc {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 996px) {
+  .tri-layout {
+    margin-top: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+  }
+  .right-tri,
+  .left-tri {
+    flex: none;
+  }
+}
+@media screen and (max-width: 886px) {
+  .box-landing,
+  .join-row {
+    width: 95%;
+  }
+  .join-row {
+    gap: 20px;
+  }
+  .main-h1 {
+    font-size: 60px;
+  }
+  .main-box h2 {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .landing-cont {
+    background-size: 300% 107%;
+  }
+}
+@media screen and (max-width: 604px) {
+  .main-box h2 {
+    font-size: 12px !important;
+  }
+}
+@media screen and (max-width: 512px) {
+  .join-row {
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+  .join-row .join-box {
+    flex: none;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 478px) {
+  .landing {
+    margin-top: 140px;
+  }
+  .main-h1 {
+    font-size: 40px;
+  }
+  br:first-child {
+    display: none;
+  }
+  .main-box h2 {
+    line-height: 1.6;
+  }
+  .sndbr {
+    display: none;
+  }
+  .nft-div {
+    flex-wrap: wrap;
+  }
+  .main-desc {
+    font-size: 12px;
+  }
+}
