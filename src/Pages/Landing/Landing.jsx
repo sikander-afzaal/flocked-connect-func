@@ -9,6 +9,7 @@ function Landing() {
     <div className="landing-cont">
       <div className="landing">
         <h1 className="main-h1">Flocked</h1>
+        
         <p className="main-desc">
           flocked aims to provide the most efficient and worry free way to
           participate in the chikn ecosystem. chikn presents an incredibly

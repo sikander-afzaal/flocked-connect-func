@@ -5,9 +5,12 @@ import Landing from "./Pages/Landing/Landing";
 
 function App() {
   const [accounts, setAccounts] = useState([]);
+  
+  
   return (
     <div className="App">
-      <Header accounts={accounts} setAccounts={setAccounts} />
+      <Header accounts={accounts} setAccounts={setAccounts} />     
+    
       <Landing />
     </div>
   );
