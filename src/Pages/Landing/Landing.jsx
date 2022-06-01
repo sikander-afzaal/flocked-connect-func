@@ -1,15 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Landing.css";
 import menu from "../../Assets/Menu.svg";
 import tri from "../../Assets/tri.png";
+import mintImg from "../../Assets/mint-img.png";
 import JoinBox from "../../Components/JoinBox";
 import Faq from "../Faq/Faq";
 function Landing() {
+  const [value, setValue] = useState(1);
+
+  const increment = () => {
+    if (value >= 1 && value < 10) {
+      setValue((prev) => prev + 1);
+    }
+  };
+  const decrement = () => {
+    if (value > 1 && value <= 10) {
+      setValue((prev) => prev - 1);
+    }
+  };
   return (
     <div className="landing-cont">
       <div className="landing">
         <h1 className="main-h1">Flocked</h1>
-        
+
         <p className="main-desc">
           flocked aims to provide the most efficient and worry free way to
           participate in the chikn ecosystem. chikn presents an incredibly
@@ -105,6 +118,51 @@ function Landing() {
         <div className="join-row">
           <JoinBox name={"Whitepaper"} />
           <JoinBox name={"Discord"} />
+        </div>
+        <div className="mint-section">
+          <p>2000/2,000</p>
+          <div className="mint-row">
+            <button
+              className="max-btn"
+              onClick={() => {
+                setValue(1);
+              }}
+            >
+              1
+            </button>
+            <button
+              style={
+                value === 1 ? { cursor: "not-allowed" } : { cursor: "pointer" }
+              }
+              onClick={() => {
+                decrement();
+              }}
+            >
+              -
+            </button>
+            <button className="mint-btn">Mint {value} Items</button>
+            <button
+              className="max-btn"
+              onClick={() => {
+                setValue(10);
+              }}
+            >
+              10
+            </button>
+            <button
+              style={
+                value === 10 ? { cursor: "not-allowed" } : { cursor: "pointer" }
+              }
+              onClick={() => {
+                increment();
+              }}
+            >
+              +
+            </button>
+          </div>
+          <h2>
+            {value * 3000} <img src={mintImg} alt="" />
+          </h2>
         </div>
       </div>
     </div>
