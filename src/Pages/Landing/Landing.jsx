@@ -115,11 +115,7 @@ function Landing() {
             </div>
           </div>
         </div>
-        <div className="join-row">
-          <JoinBox name={"Whitepaper"} />
-          <JoinBox name={"Discord"} />
-        </div>
-        <div className="mint-section">
+        <div id="mint-section" className="mint-section">
           <p>2000/2,000</p>
           <div className="mint-row">
             <button
@@ -163,6 +159,10 @@ function Landing() {
           <h2>
             {value * 3000} <img src={mintImg} alt="" />
           </h2>
+        </div>
+        <div className="join-row">
+          <JoinBox name={"Whitepaper"} />
+          <JoinBox name={"Discord"} />
         </div>
       </div>
     </div>

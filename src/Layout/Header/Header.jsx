@@ -6,12 +6,15 @@ import web3 from "../../web3";
 import flocked from "../../flocked";
 function Header({ accounts, setAccounts }) {
   async function connectAccount() {
-    if (window.ethereum) { //check if Metamask is installed
-      console.log('Request Account');
-     const account = await window.ethereum.request({ method: 'eth_requestAccounts' });
+    if (window.ethereum) {
+      //check if Metamask is installed
+      console.log("Request Account");
+      const account = await window.ethereum.request({
+        method: "eth_requestAccounts",
+      });
       console.log(account);
-    }else{
-      console.log('Please install metamask');
+    } else {
+      console.log("Please install metamask");
     }
   }
   async function mintNFT() {
@@ -19,7 +22,7 @@ function Header({ accounts, setAccounts }) {
     console.log(accounts[0]);
     await flocked.methods.mint(1).send({
       from: accounts[0],
-      value: web3.utils.toWei("0.02", "ether")
+      value: web3.utils.toWei("0.02", "ether"),
     });
   }
 
@@ -33,9 +36,9 @@ function Header({ accounts, setAccounts }) {
         </div>
         <div className="bottom-header">
           <div className="left-bottom-header">
-            <label className="nav-links" onClick={mintNFT}>
+            <a href="#mint-section" className="nav-links" onClick={mintNFT}>
               Mint
-            </label>
+            </a>
             <a href={"#"} className="nav-links">
               Stake
             </a>
