@@ -161,8 +161,8 @@ function Landing() {
           </h2>
         </div>
         <div className="join-row">
-          <JoinBox name={"Whitepaper"} />
-          <JoinBox name={"Discord"} />
+          <JoinBox url={"https://docs.flocked.cc"} name={"Whitepaper"} />
+          <JoinBox url={""} name={"Discord"} />
         </div>
       </div>
     </div>
